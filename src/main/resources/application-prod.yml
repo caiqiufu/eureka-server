@@ -36,7 +36,7 @@ security:
       password:unieap
 # 共有8个级别，按照从低到高为：ALL < TRACE < DEBUG < INFO < WARN < ERROR < FATAL < OFF。
 logging:
-   file: logs/application-debug.log
+   file: logs/eureka-server/application-error.log
    pattern:
      console: "%d %-5level %logger : %msg%n"
      file: "%d %-5level [%thread] %logger : %msg%n"
@@ -45,3 +45,11 @@ logging:
       org.springframework.web: ERROR
       com.howtodoinjava: ERROR
       org.hibernate: ERROR
+      com.netflix.eureka: ERROR
+#通过HTTP发送shutdown信号
+endpoints : 
+      #启用shutdown   
+      shutdown : 
+         enabled : true
+         #禁用密码验证
+         sensitive : false
