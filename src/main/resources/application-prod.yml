@@ -18,7 +18,7 @@ eureka:
     hostname: 172.30.8.253
   server: 
     enable-self-preservation: false	# 设为false，关闭自我保护
-    eviction-interval-timer-in-ms: 1000
+    eviction-interval-timer-in-ms: 5
   client:
     #  在默认设置下，该服务注册中心也会将自己作为客户端来尝试注册它自己，所以我们需要禁用它的客户端注册行为
     #  配置register-with-eureka: false 和 fetch-registry: false 来表明自己是一个eureka server
